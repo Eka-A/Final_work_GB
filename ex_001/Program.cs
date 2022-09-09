@@ -10,6 +10,8 @@ PrintArray(array);
 
 string[] resultArray = new string[size];
 
+FillResultArray(resultArray);
+PrintResultArray(resultArray);
 
 void PrintArray(string[] array)
 {
@@ -34,4 +36,17 @@ void FillResultArray(string[] resultArray)
             i++;
         }
     }
+}
+
+void PrintResultArray(string[] resultArray)
+{
+    Console.Write("[");
+    for (int i = 0; i < size; i++)
+    {
+        if (array[i].Length <= maxLength) Console.Write($"'{array[i]}',");
+    }
+
+    Console.Write("\b");
+    Console.Write("]");
+    Console.WriteLine();
 }
