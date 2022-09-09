@@ -8,6 +8,8 @@ array[3] = "LA";
 
 PrintArray(array);
 
+string[] resultArray = new string[size];
+
 
 void PrintArray(string[] array)
 {
@@ -19,4 +21,17 @@ void PrintArray(string[] array)
     Console.Write("\b");
     Console.Write("]");
     Console.WriteLine();
+}
+
+void FillResultArray(string[] resultArray)
+{
+   
+    for (int i = 0; i < size; i++)
+    {
+        if (array[i].Length <= maxLength)
+        {
+            resultArray[i] = array[i];
+            i++;
+        }
+    }
 }
